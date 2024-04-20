@@ -32,6 +32,7 @@ function PokemonTable(){
         {
           title: 'Pokemon Id',
           dataIndex: 'id',
+          sorter: (a:any, b:any) => a.id - b.id
         },
         {
             title: 'Pokemon Name',
@@ -44,7 +45,7 @@ function PokemonTable(){
         },
         {
             title: 'Details',
-            render:() => <Link>Details</Link>
+            render:(_:any, record:any) => <Link href= {`pokemon/${record.id}`}>{`Details ${record.id}`}</Link>
         }
       ];
     return (

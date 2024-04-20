@@ -15,10 +15,18 @@ interface PokemonTableType{
 
 export function useFetchPokemons(){
     const[pokemons, setPokemons] = useState<any[]>();
+    const[pokemon, setPokemon] = useState<any[]>();
+
     const getPokemons = () => {
         setPokemons(data);
     }
-    return {pokemons, getPokemons}
+
+    const getPokemonById = (pokId:number) => {
+        //getPokemons();
+        setPokemon(pokemons?.find((pok)=>pok.id===pokId));
+    }
+
+    return {pokemons, getPokemons, pokemon, getPokemonById}
 }
 
 //export useFetchPokemons;

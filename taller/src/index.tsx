@@ -11,11 +11,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-
-    <User 
-      name ="Paquito" 
-      phone={8774445557}
-    />
+    <App></App> 
     <PokemonTable/>
   </React.StrictMode>
 );
