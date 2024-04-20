@@ -1,6 +1,7 @@
 import { Table } from "antd";
 import { useEffect, useState } from "react";
 import { useFetchPokemons } from "../useFetchPokemons/useFetchPokemons";
+import Link from "antd/es/typography/Link";
 
 
 function PokemonTable(){
@@ -19,6 +20,7 @@ function PokemonTable(){
     },[pokemons])*/
 
     useEffect(() => {
+        getPokemons()
         if(pokemons){
             setPokemonList(pokemons)
             console.log(pokemons)
@@ -34,15 +36,21 @@ function PokemonTable(){
         {
             title: 'Pokemon Name',
             dataIndex: 'name',
+            render:(_:any, record:any) => record.name.english
         },
         {
             title: 'Pokemon Description',
             dataIndex: 'description',
+        },
+        {
+            title: 'Details',
+            render:() => <Link>Details</Link>
         }
       ];
     return (
         <>
             <Table 
+                rowKey={"id"}
                 dataSource={pokemonList}
                 columns={columns}
             />

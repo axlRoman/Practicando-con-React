@@ -16,9 +16,7 @@ root.render(
       name ="Paquito" 
       phone={8774445557}
     />
-    <PokemonTable>
-      
-    </PokemonTable>
+    <PokemonTable/>
   </React.StrictMode>
 );
 
