@@ -8,11 +8,17 @@ interface props {
 
 function User({phone, name}:props) {
     const [nameIn, setNameIn] = useState<string>(name);
+
+
+    
   return (
     <>
         Hola {nameIn} mi numero es {phone}
+        <br /><br />
         <input name="nameIn" placeholder="Your Name" ></input>
-        <button onClick={(e) => {setNameIn("nuevoname")}}>change name</button>
+        <br /><br />
+        <button onClick={(e) => {setNameIn("nuevoname")}}>change name state</button>
+        <button onClick={(e) => {name = "nuevo"}}>change name</button>
     </>
   );
 }

@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import User from './components/User';
+import PokemonTable from './components/PokemonTable';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -15,6 +16,9 @@ root.render(
       name ="Paquito" 
       phone={8774445557}
     />
+    <PokemonTable>
+      
+    </PokemonTable>
   </React.StrictMode>
 );
 
